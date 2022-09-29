@@ -18,7 +18,6 @@ async function main() {
   try {
     const connection = await amqp.connectToAmqp();
     await consumer.consume(connection);
-    mongo.createConnection();
 
     logger.info("Consuming...");
   } catch (error) {
